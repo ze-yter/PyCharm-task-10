@@ -22,7 +22,7 @@
 
 Теперь перейдём к изображениям.
 
-<h2>Исходное изображение и результаты работы <code>old_filter.py</code> и <code>filter.py</code></h2>
+<h2>Исходное изображение и результаты работы <code>old_filter.py</code> и <code>filter_with_filename.py</code></h2>
 
 ![original](images/img2.jpg)
 
