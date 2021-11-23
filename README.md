@@ -32,4 +32,4 @@
 
 <h2>Doc-тест</h2>
 
-![](images/doctest.jpg)
+![doctest.jpg](images/doctest.jpg)
