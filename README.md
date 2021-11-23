@@ -31,4 +31,4 @@
 ![goodresult.jpg](images/goodresult.jpg)
 
 <h2>Doc-тест</h2>
-![doctest.jpg](images/doctest.jpg)
+![](images/doctest.jpg)
