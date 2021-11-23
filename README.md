@@ -34,3 +34,9 @@
 
 Доктест для <code>create_mosaic_img()</code>
 ![doctest.jpg](images/doctest.jpg)
+
+Данные из отладчика:
+
+![debug1.png](images/debug1.png)
+
+![debug2.png](images/debug2.png)
