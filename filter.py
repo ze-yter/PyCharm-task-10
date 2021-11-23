@@ -3,6 +3,13 @@ import numpy as np
 
 
 def MakeColor(newMatrix, matrix, size, i, j):
+    """
+    Принимает на вход новую матрицу (матрицу изображения),
+    Матрицу первоначальную,
+    Размер и количество градаций серого,
+    Индексы текущего пикселя,
+    По итогу изменяет гамму изображения для заданного размера матрицы.
+    """
     for x in range(i, i + size):
         for y in range(j, j + size):
             for z in range(3):
@@ -10,6 +17,12 @@ def MakeColor(newMatrix, matrix, size, i, j):
 
 
 def CreateMosaicIMG(img, size, grad):
+    """
+    Принимает на вход начальное изображение,
+    Размер и количество градаций серого,
+    Возвращает обратно преобразованное изображение.
+     >>> CreateMosaicIMG('images/img2.jpg', 10, 50)
+    """
     listImg = np.array(Image.open(img)).astype(int)
     limit = 255 // grad
     lenImg = len(listImg)
