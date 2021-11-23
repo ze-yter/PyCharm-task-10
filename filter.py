@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 
-def MakeColor(newMatrix, matrix, size, i, j):
+def make_color(new_matrix, matrix, size, i, j):
     """
     Принимает на вход новую матрицу (матрицу изображения),
     Матрицу первоначальную,
@@ -13,15 +13,15 @@ def MakeColor(newMatrix, matrix, size, i, j):
     for x in range(i, i + size):
         for y in range(j, j + size):
             for z in range(3):
-                matrix[x][y][z] = newMatrix
+                matrix[x][y][z] = new_matrix
 
 
-def CreateMosaicIMG(img, size, grad):
+def create_mosaic_img(img, size, grad):
     """
     Принимает на вход начальное изображение,
     Размер и количество градаций серого,
     Возвращает обратно преобразованное изображение.
-     >>> CreateMosaicIMG('images/img2.jpg', 10, 50)
+     >>> create_mosaic_img('images/img2.jpg', 10, 50)
     """
     listImg = np.array(Image.open(img)).astype(int)
     limit = 255 // grad
@@ -35,13 +35,13 @@ def CreateMosaicIMG(img, size, grad):
             part = listImg[i: size + i, j: size + j]
             sum = np.sum(part)
             avg = int(sum // (size ** 2))
-            MakeColor(int(avg // limit) * limit / 3, listImg, size, i, j)
+            make_color(int(avg // limit) * limit / 3, listImg, size, i, j)
             j += size
         i += size
 
     return Image.fromarray(np.uint8(listImg))
 
 
-CreateMosaicIMG(input("Enter the name of the image file: "),
-                int(input("Enter the size of the mosaic: ")),
-                int(input("Enter the size of the gradation: "))).save('goodresult.jpg')
+create_mosaic_img(input("Enter the name of the image file: "),
+                  int(input("Enter the size of the mosaic: ")),
+                  int(input("Enter the size of the gradation: "))).save('goodresult.jpg')
