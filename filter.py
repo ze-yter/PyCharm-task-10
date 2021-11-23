@@ -31,4 +31,4 @@ def CreateMosaicIMG(img, size, grad):
 
 CreateMosaicIMG(input("Enter the name of the image file: "),
                 int(input("Enter the size of the mosaic: ")),
-                int(input("Enter the size of the gradation: "))).save('res.jpg')
+                int(input("Enter the size of the gradation: "))).save('goodresult.jpg')

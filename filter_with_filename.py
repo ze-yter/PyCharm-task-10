@@ -29,4 +29,4 @@ def CreateMosaicIMG(img, size, grad):
     return Image.fromarray(np.uint8(listImg))
 
 
-CreateMosaicIMG('img2.jpg', 10, 50).save('res.jpg')
+CreateMosaicIMG('img2.jpg', 10, 50).save('noinput.jpg')
