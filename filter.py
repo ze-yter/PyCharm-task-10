@@ -23,23 +23,23 @@ def create_mosaic_img(img, size, grad):
     Возвращает обратно преобразованное изображение.
      >>> create_mosaic_img('images/img2.jpg', 10, 50)
     """
-    listImg = np.array(Image.open(img)).astype(int)
+    list_img = np.array(Image.open(img)).astype(int)
     limit = 255 // grad
-    lenImg = len(listImg)
-    height = len(listImg[0])
+    len_img = len(list_img)
+    height = len(list_img[0])
     i = 0
 
-    while i < lenImg:
+    while i < len_img:
         j = 0
         while j < height:
-            part = listImg[i: size + i, j: size + j]
+            part = list_img[i: size + i, j: size + j]
             sum = np.sum(part)
             avg = int(sum // (size ** 2))
-            make_color(int(avg // limit) * limit / 3, listImg, size, i, j)
+            make_color(int(avg // limit) * limit / 3, list_img, size, i, j)
             j += size
         i += size
 
-    return Image.fromarray(np.uint8(listImg))
+    return Image.fromarray(np.uint8(list_img))
 
 
 create_mosaic_img(input("Enter the name of the image file: "),
