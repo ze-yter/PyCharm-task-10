@@ -24,7 +24,7 @@
 
 <h2>Исходное изображение и результаты работы <code>old_filter.py</code> и <code>filter.py</code></h2>
 
-![original](images/img2.jpg)
+<div style="margin: 0 auto;">![original](images/img2.jpg)</div>
 
 ![badresult.jpg](images/badresult.jpg)
 
