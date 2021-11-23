@@ -32,4 +32,5 @@
 
 <h2>Doc-тест</h2>
 
+Доктест для <code>create_mosaic_img()</code>
 ![doctest.jpg](images/doctest.jpg)
